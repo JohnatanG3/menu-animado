@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para a biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Menu Animado</title>
+</head>
+<body>
+    <!-- Botão para abrir/fechar o menu lateral -->
+    <button class="botao-menu">
+        <!-- Ícone do menu (três barras) -->
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Menu lateral com links de navegação -->
+    <nav class="menu-lateral">
+        <ul>
+            <!-- Ícone e link para Home -->
+            <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+            <!-- Ícone e link para Sobre -->
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i> Sobre</a></li>
+            <!-- Ícone e link para Serviços -->
+            <li><a href="#"><i class="fa-solid fa-gears"></i> Serviços</a></li>
+            <!-- Ícone e link para Contato -->
+            <li><a href="#"><i class="fa-solid fa-envelope"></i> Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fundo escuro que aparece ao abrir o menu -->
+    <div class="background"></div>
+
+    <!-- Conteúdo principal da página -->
+    <main class="conteudo">
+        <h1>Conteúdo Principal</h1>
+        <p>Esse é o conteúdo principal da página. Ele será ajustado quando o menu lateral for aberto ou fechado.</p>
+    </main>
+</body>
+<!-- Link para o arquivo JavaScript -->
+<script src="scripts.js"></script>
+</html>

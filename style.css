@@ -1,0 +1,132 @@
+/* Reset para margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de variáveis de cor */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #298ab9;
+    --text-color: #ecf0f1;
+    --text-secondary-color: #000f1f;
+    --background-color: #34495e;
+}
+
+/* Estilos gerais do corpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--text-color);
+    transition: background-color 0.5s ease; /* Transição suave de cor de fundo */
+}
+
+/* Estilos do botão de menu */
+.botao-menu {
+    background-color: var(--primary-color);
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 6;
+    border-radius: 5px;
+    font-size: 24px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.5s ease; /* Transição suave para o botão */
+}
+
+/* Posição do botão quando o menu está ativo */
+.botao-menu.ativo {
+    left: 320px;
+}
+
+/* Efeitos de hover e clique no botão */
+.botao-menu:hover {
+    background-color: var(--secondary-color);
+}
+.botao-menu:active {
+    opacity: 0.8;
+}
+
+/* Estilos do menu lateral */
+.menu-lateral {
+    position: fixed;
+    left: -300px; /* Começa fora da tela */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--background-color);
+    z-index: 5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Transição com curva de animação */
+}
+
+/* Menu visível quando ativo */
+.menu-lateral.ativo {
+    left: 0;
+}
+
+/* Estilos dos itens do menu */
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+}
+.menu-lateral ul li {
+    padding: 15px 30px;
+}
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Efeitos visuais ao interagir com os itens do menu */
+.menu-lateral ul li:hover {
+    background-color: var(--secondary-color);
+}
+.menu-lateral ul li a i:hover {
+    transform: translateX(5px) rotate(5deg); /* Animação de ícones ao passar o mouse */
+}
+
+/* Estilos do fundo escuro */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+}
+
+/* Fundo visível quando ativo */
+.background.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos do conteúdo principal */
+.conteudo {
+    margin-left: 80px;
+    padding: 40px;
+    color: var(--text-secondary-color);
+    background-color: var(--text-color);
+    transition: all 0.5s ease;
+}
+
+/* Posição ajustada do conteúdo quando o menu está ativo */
+.conteudo.ativo {
+    margin-left: 380px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
